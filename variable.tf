@@ -1,4 +1,4 @@
-variable "keep_locally" {
+variable "exampleVar" {
   type = bool
   default = true
 }
