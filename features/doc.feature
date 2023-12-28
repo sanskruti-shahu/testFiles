@@ -14,13 +14,12 @@ Feature: Create a Docker Container using Terraform
 
     Scenario: Verify Docker Container Internal Port
         Given I have docker_container defined
-        Then it must have port
+        Then it must have ports
         Then it must have internal
         And its value must be 80
 
     Scenario: Verify Docker Container External Port
         Given I have docker_container defined
-        Then it must have port
-        Then it must have internal
+        Then it must have ports
+        Then it must have external
         And its value must be 8000
-        
