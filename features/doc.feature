@@ -1,14 +1,17 @@
-# This feature file tests that all Docker resources have the correct security settings.
+Feature: Create a Docker Container using Terraform
 
-feature: Docker resource security
+    Scenario: Verify Docker Container Image
+        Given I have docker_container defined
+        Then it must have the image
 
-  scenario: All Docker resources have the correct security settings
+    Scenario: Verify Docker Image Name
+        Given I have docker_image defined
+        Then it must have the name
 
-    given:
-      - a Docker resource
+    Scenario: Verify Docker Container Name
+        Given I have docker_container defined
+        Then it must have the name
 
-    when:
-      - the resource is created
-
-    then:
-      - the resource should have the correct security settings
+    Scenario: Verify Docker Container port
+        Given I have docker_container defined
+        Then it must have the port
